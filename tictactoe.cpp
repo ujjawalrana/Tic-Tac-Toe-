@@ -48,20 +48,20 @@ ll is_win(){
     // -10 if You win, 10 if computer win and 0 if tie
 
     for(ll i=1;i<n;i+=3){
-        if(board[i]=='X' and board[i+1]=='X' and board[i+2]=='X')return -10;
-        if(board[i]=='O' and board[i+1]=='O' and board[i+2]=='O')return 10;
+        if(board[i]==Human and board[i+1]==Human and board[i+2]==Human)return -10;
+        if(board[i]==Bot and board[i+1]==Bot and board[i+2]==Bot)return 10;
     }
 
     for(ll i=1;i<=3;i++){
-        if(board[i]=='X' and board[i+3]=='X' and board[i+6]=='X')return -10;
-        if(board[i]=='O' and board[i+3]=='O' and board[i+6]=='O')return 10;
+        if(board[i]==Human and board[i+3]==Human and board[i+6]==Human)return -10;
+        if(board[i]==Bot and board[i+3]==Bot and board[i+6]==Bot)return 10;
     }
 
-    if(board[1]=='X' and board[5]=='X' and board[9]=='X')return -10;
-    if(board[1]=='O' and board[5]=='O' and board[9]=='O')return 10;
+    if(board[1]==Human and board[5]==Human and board[9]==Human)return -10;
+    if(board[1]==Bot and board[5]==Bot and board[9]==Bot)return 10;
 
-    if(board[3]=='X' and board[5]=='X' and board[7]=='X')return -10;
-    if(board[3]=='O' and board[5]=='O' and board[7]=='O')return 10;
+    if(board[3]==Human and board[5]==Human and board[7]==Human)return -10;
+    if(board[3]==Bot and board[5]==Bot and board[7]==Bot)return 10;
     
     return 0;
 }
